@@ -1,6 +1,6 @@
 # tryit
 
-Zaměření
+# Zaměření
 - [x] aplikace o úplného začátku
 - [x] repo v github
 - [ ] vytvoření testů
@@ -10,7 +10,7 @@ Zaměření
 - [ ] poslání mailu - upozornění na termín úkolu
 - [ ] volání webservice
 
-Co bude aplikace umět:
+# Co bude aplikace umět:
 - menu
 	- home - přehled se všemi to-do-listy
 	- statisticks - pár filtrů nad úkoly
@@ -26,11 +26,9 @@ Co bude aplikace umět:
 		- podle data kdy měli být dodělané
 
 
-
-
-Tridy
+# Tridy
 Tasks
-	Title
-	Status
-	ParrentId
+-Title
+-Status
+-ParrentId
 
