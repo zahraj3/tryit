@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-root 'application#index'
+root 'task#index'
 get  'application/about'
 get  'task/statistics'
 
