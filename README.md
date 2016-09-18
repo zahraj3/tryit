@@ -3,9 +3,10 @@
 ## Zaměření
 - [x] aplikace o úplného začátku
 - [x] repo v github
-- [ ] pouziti branch
+- [x] pouziti branch
 - [ ] vytvoření testů
 - [ ] pochopení routes
+- [ ] rails console
 - [x] připojení bootstrap
 - [ ] dotazy do dtb / různé pohledy na data
 - [ ] poslání mailu - upozornění na termín úkolu
