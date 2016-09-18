@@ -6,7 +6,7 @@
 - [ ] pouziti branch
 - [ ] vytvoření testů
 - [ ] pochopení routes
-- [ ] připojení bootstrap
+- [x] připojení bootstrap
 - [ ] dotazy do dtb / různé pohledy na data
 - [ ] poslání mailu - upozornění na termín úkolu
 - [ ] volání webservice
