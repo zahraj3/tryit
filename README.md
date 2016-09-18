@@ -3,12 +3,12 @@
 Zaměření
 - [x] aplikace o úplného začátku
 - [x] repo v github
-- vytvoření testů
-- pochopení routes
-- připojení bootstrap
-- dotazy do dtb / různé pohledy na data
-- poslání mailu - upozornění na termín úkolu
-- volání webservice
+- [ ] vytvoření testů
+- [ ] pochopení routes
+- [ ] připojení bootstrap
+- [ ] dotazy do dtb / různé pohledy na data
+- [ ] poslání mailu - upozornění na termín úkolu
+- [ ] volání webservice
 
 Co bude aplikace umět:
 - menu
