@@ -1,8 +1,8 @@
 # tryit
 
 Zaměření
-- aplikace o úplného začátku
-- evidence v github
+- [x] aplikace o úplného začátku
+- [x] repo v github
 - vytvoření testů
 - pochopení routes
 - připojení bootstrap
@@ -34,5 +34,3 @@ Tasks
 	Status
 	ParrentId
 
-
-	
