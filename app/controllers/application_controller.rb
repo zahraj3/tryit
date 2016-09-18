@@ -5,4 +5,10 @@ class ApplicationController < ActionController::Base
 
   def index
   end
+
+  def statistics
+  end
+
+  def about
+  end
 end
