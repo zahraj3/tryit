@@ -6,7 +6,7 @@
 - [x] pouziti branch
 - [ ] vytvoření testů
 - [ ] pochopení routes
-- [ ] rails console
+- [x] rails console
 - [x] připojení bootstrap
 - [ ] dotazy do dtb / různé pohledy na data
 - [ ] poslání mailu - upozornění na termín úkolu
