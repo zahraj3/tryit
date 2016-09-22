@@ -11,6 +11,7 @@
 - [ ] seeds
 - [ ] dotazy do dtb / různé pohledy na data
 - [ ] poslání mailu - upozornění na něco ohledně úkolu
+
 ### Nice to have
 - [ ] treeview
 - [ ] volání webservice
@@ -22,6 +23,7 @@
 		- obsluha tásků - úpravy, mazání - přepojení na jiného rodiče
 	- statisticks - pár filtrů nad úkoly
 	- about - návody
+
 ###Nice to have	
 	- login/settings
 
