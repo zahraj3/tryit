@@ -1,6 +1,11 @@
 # tryit
 
-## Zaměření
+## Instalace
+- clone
+- bundle install
+- rake db:setup
+
+## Zaměření základ
 - [x] aplikace o úplného začátku
 - [x] repo v github
 - [x] pouziti branch
@@ -8,11 +13,15 @@
 - [x] pochopení routes
 - [x] rails console
 - [x] připojení bootstrap
-- [ ] seeds
+- [x] seeds
 - [ ] dotazy do dtb / různé pohledy na data
+
+## Rozšířené
 - [ ] poslání mailu - upozornění na něco ohledně úkolu
-- [ ] treeview (Nice to have)
-- [ ] volání webservice (Nice to have)
+- [ ] treeview
+- [ ] vyhledávání úkolu
+- [ ] volání webservice
+
 
 ## Co bude aplikace umět:
 - menu
@@ -20,6 +29,10 @@
 		- zadávání nových to-do listů/tásků do neomezené hloubky
 		- obsluha tásků - úpravy, mazání - přepojení na jiného rodiče
 	- statisticks - pár filtrů nad úkoly
+		- počet úkolů ve stavech
+		- celkový počet úkolů
+		- poslední úpravené úkoly
+		- všechny úkoly, které jsou právě v řešení/dodělané/uzavřené
 	- about - návody
 	- login/settings (Nice to have)
 
@@ -33,8 +46,5 @@
 
 
 ## Tridy
-- Tasks
-	-Title
-	-Status
-	-Parrent_Id
+- Tasks (Title, Status, Parrent_Id)
 

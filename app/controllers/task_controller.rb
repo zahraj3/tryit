@@ -2,7 +2,8 @@ class TaskController < ApplicationController
 before_action :set_task, only: [:show, :destroy, :edit]
 
   def index
-    @tasks = Task.where(:parrent_id=> nil)
+    @task = Task.find(1)
+    @tasks = Task.where("parrent_id= 1 AND id>1")
   end
 
   def show
