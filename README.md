@@ -11,10 +11,8 @@
 - [ ] seeds
 - [ ] dotazy do dtb / různé pohledy na data
 - [ ] poslání mailu - upozornění na něco ohledně úkolu
-
-### Nice to have
-- [ ] treeview
-- [ ] volání webservice
+- [ ] treeview (Nice to have)
+- [ ] volání webservice (Nice to have)
 
 ## Co bude aplikace umět:
 - menu
@@ -23,17 +21,15 @@
 		- obsluha tásků - úpravy, mazání - přepojení na jiného rodiče
 	- statisticks - pár filtrů nad úkoly
 	- about - návody
-
-###Nice to have	
-	- login/settings
+	- login/settings (Nice to have)
 
 - založí to-do-list
 - vytvoří jednotlivé úkoly jako jednotlivé záznamy v tabulce
 - zobrazí úvodní stránku s více to-do-listy
 - umožní různé pohledy na úkoly 
-		- po to-do-listech
-		- všechny aktuálně rozpracované
-		- podle data kdy měli být dodělané
+	- po to-do-listech
+	- všechny aktuálně rozpracované
+	- podle data kdy měli být dodělané
 
 
 ## Tridy
