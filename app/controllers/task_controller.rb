@@ -4,10 +4,12 @@ before_action :set_task, only: [:show, :destroy, :edit]
   def index
     @task = Task.find(1)
     @tasks = Task.where("parrent_id= 1 AND id>1")
+    path_to_task
   end
 
   def show
     @tasks = Task.where(:parrent_id=> params[:id])
+    path_to_task
     render :index
   end
 
@@ -47,9 +49,21 @@ before_action :set_task, only: [:show, :destroy, :edit]
   
   end
   
+  def path_to_task
+    $id = @task.id
+    @parrent_path = ''
+    begin 
+      @parrent_task = Task.find($id)
+      @parrent_path = @parrent_task.title + ' / ' + @parrent_path
+      $id = @parrent_task.parrent_id
+    end while $id > 0
+
+  end
+
   def set_task
     @task = Task.find params[:id]
   end
+
   def redirect_path
     root_path
   end
