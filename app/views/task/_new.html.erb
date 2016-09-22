@@ -2,5 +2,6 @@
   <div class="row">
     <div class="col-md-10"><%= f.text_field :title, class: 'form-control' %></div>
     <div class="col-md-2"><%= f.submit "Create Task List", class: "btn btn-primary col-md-10" %></div>
+    <%= f.hidden_field :parrent_id, :value => if defined? @task then @task.id else nil end %>
   </div>
 <% end %>

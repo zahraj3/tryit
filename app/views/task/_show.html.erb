@@ -1,6 +1,6 @@
 <% @tasks.each do |t| %>
 <div class="row">
-  <div class="col-md-8"><%= t.title %></div>
+  <div class="col-md-8"><%= link_to t.title, t  %></div>
   <div class="col-md-4"><%= t.status %> </div>
 </div>
 <% end %>
