@@ -5,18 +5,24 @@
 - [x] repo v github
 - [x] pouziti branch
 - [ ] vytvoření testů
-- [ ] pochopení routes
+- [x] pochopení routes
 - [x] rails console
 - [x] připojení bootstrap
+- [ ] seeds
 - [ ] dotazy do dtb / různé pohledy na data
-- [ ] poslání mailu - upozornění na termín úkolu
+- [ ] poslání mailu - upozornění na něco ohledně úkolu
+### Nice to have
+- [ ] treeview
 - [ ] volání webservice
 
 ## Co bude aplikace umět:
 - menu
 	- home - přehled se všemi to-do-listy
+		- zadávání nových to-do listů/tásků do neomezené hloubky
+		- obsluha tásků - úpravy, mazání - přepojení na jiného rodiče
 	- statisticks - pár filtrů nad úkoly
 	- about - návody
+###Nice to have	
 	- login/settings
 
 - založí to-do-list
@@ -32,5 +38,5 @@
 - Tasks
 	-Title
 	-Status
-	-ParrentId
+	-Parrent_Id
 
