@@ -1,0 +1,9 @@
+<% 
+	$i = 0
+	$size = @parrent_path.size
+  while $i < $size  do
+%>
+   <a href="/task/<%= @parrent_path[$i][0] %>"><%= @parrent_path[$i][1] %></a> 
+   <%= " / " if $i < ($size-1) %>  
+   <% $i +=1 %>
+<% end %>

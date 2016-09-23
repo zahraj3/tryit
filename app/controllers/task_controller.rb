@@ -49,15 +49,39 @@ before_action :set_task, only: [:show, :destroy, :edit]
   
   end
   
-  def path_to_task
-    $id = @task.id
-    @parrent_path = ''
-    begin 
-      @parrent_task = Task.find($id)
-      @parrent_path = @parrent_task.title + ' / ' + @parrent_path
-      $id = @parrent_task.parrent_id
-    end while $id > 0
+  # def path_to_task
+  #   id = @task.id
+  #   @parrent_path = ''
+  #   begin 
+  #     parrent_task = Task.find(id)
+  #     @parrent_path = parrent_task.title + ' / ' + @parrent_path
+  #     id = parrent_task.parrent_id
+  #   end while id > 0
 
+  # end
+  
+  # def path_to_task
+  #   id = @task.id
+  #   @parrent_path = ''
+  #   begin 
+  #     parrent_task = Task.find(id)
+  #     link = '<a href="/task/' + parrent_task.id.to_s + '">' + parrent_task.title + '</a>'
+  #     @parrent_path = link + ' / ' + @parrent_path
+  #     id = parrent_task.parrent_id
+  #   end while id > 0
+  # end
+  
+
+  def path_to_task
+    id = @task.id
+    title = @task.title
+    @parrent_path = Array.new
+    
+    begin 
+      parrent_task = Task.find(id)
+      @parrent_path.unshift([parrent_task.id.to_s, parrent_task.title])
+      id = parrent_task.parrent_id
+    end while id > 0
   end
 
   def set_task
