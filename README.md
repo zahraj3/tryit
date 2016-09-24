@@ -9,6 +9,7 @@
 - [x] aplikace o úplného začátku
 - [x] repo v github
 - [x] pouziti branch
+- [x] pouziti trello
 - [ ] vytvoření testů
 - [x] pochopení routes
 - [x] rails console
