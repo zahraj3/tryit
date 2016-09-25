@@ -1,20 +1,77 @@
-<% task_before = nil 
+<%
+task_before = nil 
 @tasks.each do |t|
 	if t.status != task_before
 		if task_before != nil
-			%>
+%>
 	</div>
 </div>
-	<% end %>
+<%
+    end
+%>
 <div class="row">
-  <div class="col-md-12"><h2><i class="glyphicon glyphicon-<%= status_to_class(t.status) %>"></i> <%= t.status %></h2>
-	<% end%>
-		<div class="row">
-	  	<div class="col-md-2"><i class="glyphicon glyphicon-<%= status_to_class(t.status) %>"></i> <%= t.status %></div>
-  		<div class="col-md-4"><%= link_to t.title, t  %></div>
-  		<div class="col-md-1"><%= link_to("Remove", t, method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" })  %></div>
-		</div>
-<%task_before = t.status
-end %>
+  <div class="col-md-12"><h4><i class="glyphicon glyphicon-<%= status_to_class(t.status) %>"></i> <%= t.status %></h4>
+<%
+	end
+%>
+    <div class="panel panel-default">
+      <div class="panel-body">
+          <div class="row">
+            <div class="col-md-1">
+              <div class="btn-group">
+                <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                	<i class="glyphicon glyphicon-<%= status_to_class(t.status) %>"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                  <%=
+                  if t.status!='Done'
+                  	link_to t do
+                  %>
+  								<i class="glyphicon glyphicon-ok"></i> Done
+  								<%
+  									end
+  								end
+  								%>
+                  </li>
+                  <li>
+                  <li>
+                  <%=
+                  if t.status!='In process'
+                  	link_to t do
+                  %>
+  								<i class="glyphicon glyphicon-play"></i> In process
+  								<%
+  									end
+  								end
+  								%>
+                  </li>
+                                    <li>
+                  <%=
+                  if t.status!='To do'
+                  	link_to t do
+                  %>
+  								<i class="glyphicon glyphicon-stop"></i> To do
+  								<%
+  									end
+  								end
+  								%>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-10"><h4><%= link_to t.title, t  %></h4></div>
+            <div class="col-md-1 text-right">
+              <%= link_to t, method: :delete, class: "btn", data: { confirm: "Are you sure?" } do %>
+  						<i class="glyphicon glyphicon-trash %>"></i>
+  						<% end %>
+            </div>
+          </div>
+      </div>
+    </div>
+<%
+task_before = t.status
+end
+%>
  	</div>
 </div>

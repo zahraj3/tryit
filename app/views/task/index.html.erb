@@ -1,16 +1,15 @@
-<% if @task!=nil %>
+<div class="panel panel-default">
+  <div class="panel-heading"><%= render 'task/path_to_task' %></div>
+  <div class="panel-body">
+    <%= render 'task/edit' %>
+  </div>
 	<div class="panel panel-default">
-	  <div class="panel-heading"><%= render 'task/path_to_task' %></div>
+	  <div class="panel-heading">Tasks</div>
 	  <div class="panel-body">
-	    <%= render 'task/edit' %>
+	    <%= render 'task/show' %>
+	    <%= render 'task/new' %>
 	  </div>
 	</div>
-<% end %>
-
-<div class="panel panel-default">
-  <div class="panel-heading">Tasks</div>
-  <div class="panel-body">
-    <%= render 'task/show' %>
-    <%= render 'task/new' %>
-  </div>
 </div>
+
+

@@ -1,4 +1,19 @@
 <div class="row">
-  <div class="col-md-8"><%= @task.title %></div>
-  <div class="col-md-4"><%= @task.status %> </div>
+  <div class="col-md-8"><h2><%= @task.title %><h2></div>
+  <div class="col-md-4">
+		<table class="table">
+			<tr>
+			  <td>Status</td>
+			  <td><%= @task.status %></td>
+			</tr>			
+			<tr>
+			  <td>Created at</td>
+			  <td><%= @task.created_at %></td>
+			</tr>
+			<tr>
+			  <td>Update at</td>
+			  <td><%= @task.updated_at %></td>
+			</tr>
+		</table>
+  </div>
 </div>
