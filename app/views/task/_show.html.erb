@@ -1,7 +1,20 @@
-<% @tasks.each do |t| %>
-<div class="row">
-  <div class="col-md-4"><%= link_to t.title, t  %></div>
-  <div class="col-md-2"><%= t.status %></div>
-  <div class="col-md-1"><%= link_to("Remove", t, method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" })  %></div>
+<% task_before = nil 
+@tasks.each do |t|
+	if t.status != task_before
+		if task_before != nil
+			%>
+	</div>
 </div>
-<% end %>
+	<% end %>
+<div class="row">
+  <div class="col-md-12"><h2><i class="glyphicon glyphicon-<%= status_to_class(t.status) %>"></i> <%= t.status %></h2>
+	<% end%>
+		<div class="row">
+	  	<div class="col-md-2"><i class="glyphicon glyphicon-<%= status_to_class(t.status) %>"></i> <%= t.status %></div>
+  		<div class="col-md-4"><%= link_to t.title, t  %></div>
+  		<div class="col-md-1"><%= link_to("Remove", t, method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" })  %></div>
+		</div>
+<%task_before = t.status
+end %>
+ 	</div>
+</div>

@@ -3,12 +3,12 @@ before_action :set_task, only: [:show, :destroy, :edit]
 
   def index
     @task = Task.find(1)
-    @tasks = Task.where("parrent_id= 1 AND id>1")
+    @tasks = Task.where("parrent_id= 1 AND id>1").order(:status)
     path_to_task
   end
 
   def show
-    @tasks = Task.where(:parrent_id=> params[:id])
+    @tasks = Task.where(:parrent_id=> params[:id]).order(:status)
     path_to_task
     render :index
   end
@@ -48,29 +48,6 @@ before_action :set_task, only: [:show, :destroy, :edit]
   def statistics
   
   end
-  
-  # def path_to_task
-  #   id = @task.id
-  #   @parrent_path = ''
-  #   begin 
-  #     parrent_task = Task.find(id)
-  #     @parrent_path = parrent_task.title + ' / ' + @parrent_path
-  #     id = parrent_task.parrent_id
-  #   end while id > 0
-
-  # end
-  
-  # def path_to_task
-  #   id = @task.id
-  #   @parrent_path = ''
-  #   begin 
-  #     parrent_task = Task.find(id)
-  #     link = '<a href="/task/' + parrent_task.id.to_s + '">' + parrent_task.title + '</a>'
-  #     @parrent_path = link + ' / ' + @parrent_path
-  #     id = parrent_task.parrent_id
-  #   end while id > 0
-  # end
-  
 
   def path_to_task
     id = @task.id
