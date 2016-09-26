@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  status: MyString
-  parrent_id: 1
+  id: 1
+  title: Root
+  status: 1
+  parrent_id: 0
 
 two:
-  title: MyString
-  status: MyString
+  id: 2
+  title: TaskList
+  status: 1
   parrent_id: 1

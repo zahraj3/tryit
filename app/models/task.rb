@@ -3,5 +3,5 @@ class Task < ActiveRecord::Base
 
 	enum status: {"Done": 0, "In process": 1,  "To Do":2}
 	
-	validates :title, presence: true	
+	validates :title, :parrent_id, presence: true	
 end
