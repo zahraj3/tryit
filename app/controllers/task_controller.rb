@@ -22,16 +22,19 @@ before_action :set_task, only: [:show, :destroy, :edit]
   	@task.status = 1
     @task.parrent_id = params[:task][:parrent_id]
     if @task.save
-     redirect_to action: "show", id: params[:task][:parrent_id]
+      flash[:success] = "Task was successfully created."
+      redirect_to action: "show", id: params[:task][:parrent_id]
+    else
+      redirect_to redirect_path, danger: 'Some parameters are missing.'
     end
-    
   end
 
   def destroy
     @subtasks = Task.where(:parrent_id=> params[:id])
     if @subtasks==[]
       @task.destroy
-      redirect_to action: "show", id: @task.parrent_id, success: 'Task was successfully destroyed.'
+      flash[:success] = "Task was successfully destroyed."
+      redirect_to action: "show", id: @task.parrent_id
     else
       redirect_to redirect_path, danger: 'Task can not be removed. There are exists some subtasks.'
     end
