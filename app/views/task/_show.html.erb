@@ -10,17 +10,17 @@ task_before = nil
     end
 %>
 <div class="row">
-  <div class="col-md-12"><h4><i class="glyphicon glyphicon-<%= status_to_class(t.status) %>"></i> <%= t.status %></h4>
+  <div class="col-md-12"><h3 class="text-<%= s_to_txt(t.status) %>"><i class="glyphicon glyphicon-<%= s_to_ico(t.status) %>"></i> <%= t.status %></h3>
 <%
 	end
 %>
-    <div class="panel panel-default">
-      <div class="panel-body">
+    <div class="panel panel-<%= s_to_txt(t.status) %>">
+      <div class="panel-heading">
           <div class="row">
             <div class="col-md-1">
               <div class="btn-group">
-                <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                	<i class="glyphicon glyphicon-<%= status_to_class(t.status) %>"></i>
+                <button type="button" class="btn btn-<%= s_to_txt(t.status) %> dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                	<i class="glyphicon glyphicon-<%= s_to_ico(t.status) %>"></i>
                 </button>
                 <ul class="dropdown-menu">
                   <li>
@@ -59,9 +59,9 @@ task_before = nil
                 </ul>
               </div>
             </div>
-            <div class="col-md-10"><h4><%= link_to t.title, t  %></h4></div>
+            <div class="col-md-10"><h4><%= link_to t.title, t, class: "text-" + s_to_txt(t.status)  %></h4></div>
             <div class="col-md-1 text-right">
-              <%= link_to t, method: :delete, class: "btn", data: { confirm: "Are you sure?" } do %>
+              <%= link_to t, method: :delete, class: "btn btn-" + s_to_txt(t.status), data: { confirm: "Are you sure?" } do %>
   						<i class="glyphicon glyphicon-trash %>"></i>
   						<% end %>
             </div>

@@ -1,5 +1,5 @@
 module TaskHelper
-  def status_to_class(status)
+  def s_to_ico(status)
     case status
     when 'Done'
       'ok'
@@ -7,6 +7,17 @@ module TaskHelper
       'play'
     else
       'stop'
+    end
+  end
+
+  def s_to_txt(status)
+    case status
+    when 'Done'
+      'info'
+    when 'In Process'
+      'success'
+    else
+      'warning'
     end
   end
 end

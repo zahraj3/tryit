@@ -37,7 +37,7 @@ before_action :set_task, only: [:show, :destroy, :edit, :start, :stop, :finish]
 
   def create
   	@task = Task.new task_params
-  	@task.status = 1
+  	@task.status = 2
     @task.parrent_id = params[:task][:parrent_id]
     if @task.save
       flash[:success] = "Task was successfully created."
