@@ -1,5 +1,23 @@
 class TaskController < ApplicationController
-before_action :set_task, only: [:show, :destroy, :edit]
+before_action :set_task, only: [:show, :destroy, :edit, :start, :stop, :finish]
+ 
+  def start
+    @task.status = "In Process"
+    @task.save
+    redirect_to action: "show", id: @task.parrent_id
+  end
+
+  def stop
+    @task.status = "To Do"
+    @task.save
+    redirect_to action: "show", id: @task.parrent_id
+  end
+
+  def finish
+    @task.status = "Done"
+    @task.save
+    redirect_to action: "show", id: @task.parrent_id
+  end
 
   def index
     @task = Task.find(1)

@@ -3,8 +3,13 @@ root 'task#index'
 get  'application/about'
 get  'task/statistics'
 
-resources :task
-
+resources :task do
+  member do
+    put :stop
+    put :start
+    put :finish
+  end
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -26,19 +26,18 @@ task_before = nil
                   <li>
                   <%=
                   if t.status!='Done'
-                  	link_to t do
+                    link_to finish_task_path(t) , method: :put do
                   %>
-  								<i class="glyphicon glyphicon-ok"></i> Done
-  								<%
-  									end
-  								end
-  								%>
+                  <i class="glyphicon glyphicon-ok"></i> Done
+                  <%
+                    end
+                  end
+                  %>
                   </li>
                   <li>
-                  <li>
                   <%=
-                  if t.status!='In process'
-                  	link_to t do
+                  if t.status!='In Process'
+                  	link_to start_task_path(t) , method: :put do
                   %>
   								<i class="glyphicon glyphicon-play"></i> In process
   								<%
@@ -46,10 +45,10 @@ task_before = nil
   								end
   								%>
                   </li>
-                                    <li>
+                  <li>
                   <%=
-                  if t.status!='To do'
-                  	link_to t do
+                  if t.status!='To Do'
+                  	link_to stop_task_path(t) , method: :put do
                   %>
   								<i class="glyphicon glyphicon-stop"></i> To do
   								<%

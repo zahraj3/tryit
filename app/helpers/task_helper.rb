@@ -3,7 +3,7 @@ module TaskHelper
     case status
     when 'Done'
       'ok'
-    when 'In process'
+    when 'In Process'
       'play'
     else
       'stop'
